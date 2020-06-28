@@ -1,17 +1,18 @@
-/* Tarefa de decifrar uma cifra
- *
- * Dica: veja em referencia/cifrador.c o codigo-fonte do programa
- * que gerou as cifras que voce precisa decifrar!
- */
+/* Data da submissao: 28/06/2020
+* Nome: Luiz Guilherme Silva Moreira
+* RA: 202391
+*/
 
 #include <stdio.h>
 
+/* Definicoes de variaveis */
 #define TAM_BUFFER 60
 char buffer_entrada[TAM_BUFFER];
 char buffer_saida[TAM_BUFFER];
 char chave[] = "SENHASECRETA";
 
 int main() {
+	/* Variaveis auxiliares */
 	int aux_int = 0, letra = 0, k = 0, deslocamento = 0, cont_chave = 0;
 	char decode;
 	
@@ -20,6 +21,8 @@ int main() {
 
 	k = 0;
 	cont_chave = 0;
+
+	/* Decodificacao */	
 	while(buffer_entrada[k] != '\n'){
 
 		if(buffer_entrada[k] < 65 || buffer_entrada[k] > 90){
